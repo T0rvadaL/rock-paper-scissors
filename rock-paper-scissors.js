@@ -23,3 +23,25 @@ function playRound(playerPick, computerPick) {
 
     return "Invalid selection";
 }
+
+function game(rounds = 5) {
+    let playerScore = 0;
+    let computerScore = 0;
+
+    for (let i = 0; i < rounds; i++ ) {
+        let roundWinner = playRound(prompt("Rock, paper or scissors?"), computerPlay());
+
+        switch (roundWinner) {
+            case "Player wins!": playerScore++;
+            case "Computer wins!": computerScore++;
+        }
+        console.log(roundWinner);
+    }
+    let winner;
+    switch (true) {
+        case playerScore > computerScore: winner = "Player";
+        case playerScore < computerScore: winner = "Computer";
+        default: return "It's a tie!";
+    }
+    return `${winner} wins!`;
+}
