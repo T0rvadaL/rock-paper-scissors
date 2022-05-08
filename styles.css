@@ -12,10 +12,12 @@ body {
     overflow: hidden;
 }
 
-.counters {
+.header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid black;
+    height: 230px;
 }
 
 .scores,
@@ -23,15 +25,10 @@ body {
     width: 330px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     margin: 50px;
     font-size: 40px;
     font-weight: bold;
     color: rgb(223, 107, 65);
-}
-
-.round-counters {
-    width: 200px;
 }
 
 .player-score,
@@ -40,6 +37,28 @@ body {
 .current-round {
     display: flex;
     justify-content: space-between;
+}
+
+.first-to-n,
+.player-score {
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.current-round,
+.computer-score {
+    padding-top: 10px;
+}
+
+.winner {
+    align-self: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(223, 107, 65);
+}
+
+span {
+    color: rgb(193, 193, 0)
 }
 
 .buttons {
